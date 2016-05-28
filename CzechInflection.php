@@ -159,13 +159,9 @@ class CzechCase
 				{
 					if(is_int(strpos("hkrdtngbflmpvw", $k1))) $s .= "u";
 					if(is_int(strpos("žščřcjszx",      $k1))) $s .= "i";
+					if(is_int(strpos("aáeéioóuúůy",    $k1))) $s .= "ovi";
 				}
-				else if(!is_int(strpos(self::$vowels, $k1)))
-				{
-					$s .= "ovi";
-				}
-
-				if(is_int(strpos(self::$vowels, $k1)))
+				else
 				{
 					$s .= "ovi";
 				}
